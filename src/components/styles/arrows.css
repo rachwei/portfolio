@@ -1,0 +1,12 @@
+.box {
+    height: 108px;
+    width: 250px;
+  }
+  
+.box .arrow {
+    height: 89px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 239px;
+}
