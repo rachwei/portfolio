@@ -29,7 +29,7 @@ const ResearchProjects = (props) => {
 
         <ProjectCard
           name="AL Text to Math Parser"
-          blurb="Parse sentences into math expressions using patterns."
+          blurb="Parse sentences into math expressions."
           about={
             "Coming soon!"
           }
@@ -43,7 +43,7 @@ const ResearchProjects = (props) => {
 
         <ProjectCard
           name="DNeRF: Dynamic NeRF"
-          blurb="Extend NeRF methods to dynamic objects with the help of LiDAR."
+          blurb="Extend NeRF methods to dynamic objects using LiDAR."
           about={
             "Coming soon!"
           }
@@ -56,8 +56,8 @@ const ResearchProjects = (props) => {
         />
 
         <ProjectCard
-          name="Parasol Lab Robot Motion Planning"
-          blurb="A Web App that allows Spotify users to visualize their listening stats."
+          name="Parasol Lab"
+          blurb="Refactor sampling classes for Robot Motion Planning."
           about={
             "Coming soon!"
           }

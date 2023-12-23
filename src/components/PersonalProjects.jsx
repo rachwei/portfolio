@@ -30,7 +30,7 @@ const ResearchProjects = (props) => {
 
         <ProjectCard
           name="Muxi: Share your Music"
-          blurb="Share your music thoughts and ratings with friends."
+          blurb="Share your listening activity with friends."
           about={
             "Coming soon!"
           }
@@ -43,7 +43,7 @@ const ResearchProjects = (props) => {
 
         <ProjectCard
           name="ARPaint"
-          blurb="Draw in 3D just by using your fingers!"
+          blurb="Draw in 3D by just using your fingers!"
           about={
             "Coming soon!"
           }
@@ -57,7 +57,7 @@ const ResearchProjects = (props) => {
 
         <ProjectCard
           name="MongoDB: Microservices"
-          blurb="Detecting false positives and generating build failure suggestions."
+          blurb="Detect false positives and generate build failure suggestions."
           about={
             "Coming soon!"
           }
@@ -69,7 +69,7 @@ const ResearchProjects = (props) => {
         />
         <ProjectCard
           name="Face Swapper/Cartoonify"
-          blurb="Exploring face swapping/cartoonifying."
+          blurb="Explore face swapping/cartoonifying techniques."
           about={
             "Coming soon!"
           }
