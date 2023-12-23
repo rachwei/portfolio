@@ -5,6 +5,8 @@ import { useSpring, animated } from 'react-spring'
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import "./styles/arrows.css"
 
+import FindMe from './FindMe'
+
 import homeportrait from '../images/homephoto.png'
 import arthome from '../images/arthome.jpg'
 import projecthome from '../images/projecthome.jpg'
@@ -40,12 +42,18 @@ const typewriter = keyframes`
 `
 const blinkTextCursor = keyframes`
     from {
-        border-right-color: hsl(0, 0%, 80%);
+        border-right-color: hsl(0, 0%, 90%);
     }
     to {
         border-right-color: transparent;
     }
 `
+
+const stopBlink = keyframes`
+    from, to {
+        border-right: transparent;
+    }
+`;
 
 const Title = styled.h1`
     overflow: hidden;
@@ -55,8 +63,10 @@ const Title = styled.h1`
     left: 50%;
     top: 17%;
     transform: translate(-50%, -50%);
-    animation: ${typewriter} 4s steps(44) 1s 1 normal both,
-        ${blinkTextCursor} 500ms infinite;
+    border-right: 2px solid hsl(0, 0%, 90%);
+    animation: ${typewriter} 6s steps(44) 1s 1 normal both,
+               ${blinkTextCursor} 1s infinite,
+               ${stopBlink} 1s 7s 1 normal forwards;
 `
 
 const Blob = styled.div`
@@ -64,7 +74,7 @@ const Blob = styled.div`
 `
 
 const Logo = styled.img`
-    width: 5em;
+    width: 6em;
 `
 const Wrapper = styled.div`
     position: relative;
@@ -84,6 +94,36 @@ const FeaturedImage = styled.img `
     border-radius: 100%
 `
 
+const ArtHome = styled.img`
+    width: 250px;
+    transform: translateY(270%) translateX(410%);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2) translateY(230%) translateX(350%);
+    }
+`
+
+const ProjectHome = styled.img`
+    width: 285px;
+    transform: translateY(25%) translateX(310%);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2) translateY(30%) translateX(260%);
+    }
+`
+
+const ResearchHome = styled.img`
+    width: 285px;
+    transform: translateY(-55%) translateX(10%);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2) translateY(-40%) translateX(10%);
+    }
+`
+
 function BlobPhoto() {
     const redblob1 = "M49.5 -53.5C60.9 -38.2 64.4 -19.1 64.2 -0.2C64 18.6 59.9 37.2 48.6 46.8C37.2 56.4 18.6 57 1.1 55.9C-16.5 54.8 -33 52.2 -52.2 42.6C-71.3 33 -93.2 16.5 -94.2 -1.1C-95.3 -18.6 -75.6 -37.2 -56.4 -52.6C-37.2 -67.9 -18.6 -80 0.2 -80.2C19.1 -80.4 38.2 -68.9 49.5 -53.5"
     const redblob2 = "M47.3 -55.4C56.9 -37.7 57.2 -18.9 57.2 0C57.2 18.9 56.9 37.7 47.3 51.5C37.7 65.4 18.9 74.2 -1.8 76C-22.4 77.7 -44.8 72.5 -64 58.6C-83.1 44.8 -99.1 22.4 -96.2 2.8C-93.4 -16.7 -71.8 -33.5 -52.6 -51.1C-33.5 -68.8 -16.7 -87.4 1.1 -88.5C18.9 -89.5 37.7 -73 47.3 -55.4"//"M47.5,-58.1C61.4,-44.9,72.6,-29.8,77.3,-12.3C82,5.3,80.2,25.3,69.2,35.7C58.1,46.2,37.8,47,21.6,48C5.4,48.9,-6.6,50,-20.4,48.3C-34.2,46.7,-49.9,42.3,-58.1,31.7C-66.3,21.2,-67.1,4.6,-59.7,-5.9C-52.4,-16.4,-36.8,-20.9,-25.5,-34.5C-14.2,-48.2,-7.1,-71,4.8,-76.8C16.8,-82.6,33.5,-71.3,47.5,-58.1Z"
@@ -98,18 +138,17 @@ function BlobPhoto() {
         ],
         loop: true,
     })
-    const [hovered, setHovered] = useState(false)
 
     return (
         <Wrapper>
             <Link to="/art"> 
-                <Image src={arthome}  style={{transform: "translateY(260%) translateX(310%)", width: "250px"}}/>
+                <ArtHome src={arthome}/>
             </Link>
             <Link to="/projects"> 
-                <img src={projecthome}  style={{transform: "translateY(115%) translateX(145%)", width: "285px"}}></img>
+                <ProjectHome src={projecthome}/>
             </Link>
             <Link to="/research"> 
-                <img src={researchhome}  style={{transform: "translateY(145%) translateX(-260%)", width: "285px"}}></img>
+                <ResearchHome src={researchhome}/>
             </Link>
             <LayeredElement style={{transform: "translateY(-100%) translateX(63%)"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="90" viewBox="0 0 240 90" fill="none">
@@ -179,10 +218,21 @@ function Grid() {
                     I graduated from the University of Illinois at Urbana-Champaign <b>(UIUC)</b> this <b>December</b> with a degree in <b>Computer Science</b> 💻 <br />
                     <br></br>
                     In recent summers, I've interned as a <b>software engineering intern</b> at: <br /><br />
-                    <Logo src={mongo}/> <Logo src={hcii}/> <br></br>
+                    <Row className="d-flex justify-content-center align-items-center">
+                            <Logo src={mongo} alt="MongoDB Logo" />
+                            <Logo src={hcii} alt="HCII Logo" />
+                    </Row>
                     <br></br>
-                    Check out some of my work! I hope you like your stay here :)<br/>
-                
+                    Please feel free to reach out to me via {' '}
+                    <a href="mailto:rachaelwei@gmail.com" target="_blank" rel="noreferrer">
+                        <b>email</b>
+                    </a>
+                    {' '} or check out my {' '}
+                    <a href="%PUBLIC_URL%/resume_rachael.pdf" download="rachael_resume.pdf">
+                        <b>resume</b>
+                    </a>.
+                    <br></br>I hope you like your stay here :)
+                    <br></br><b>Website under construction! 👷‍♀️</b>
                 </p>
                 </Col>
             </Row>
@@ -199,11 +249,12 @@ function HomePage() {
                 <h1 style ={{"height": "6vh"}}></h1>
                 <BlobPhoto/>
             </Row>
-            <h1 style ={{"height": "7vh"}}></h1>
+            <h1 style ={{"height": "8vh"}}></h1>
             <Row style={{"height": "70vh"}}>
                 <Grid />
             </Row>
             </Container>
+            <FindMe />
         </Home>
     );
 }

@@ -25,17 +25,17 @@ const NavigationBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
             <Nav.Link as={Link} to="/projects" style={navLinkStyle}>
-                Projects!
+                Projects
             </Nav.Link>
             <Nav.Link as={Link} to="/research" style={navLinkStyle}>
                 Research
             </Nav.Link>
             <Nav.Link as={Link} to="/art" style={navLinkStyle}>
-                Art
+                Art/Misc
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact" style={navLinkStyle}>
-                Contact
-            </Nav.Link>
+            {/* <Nav.Link as={Link} to="/contact" style={navLinkStyle}>
+                Let's chat!
+            </Nav.Link> */}
             </Nav>
         </Navbar.Collapse>
       </div>

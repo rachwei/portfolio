@@ -8,7 +8,6 @@ import HomePage from './components/HomePage'
 import Contact from './components/Contact'
 import Research from './components/Research'
 import NavigationBar from './components/NavigationBar';
-import FindMe from './components/FindMe'
 import Art from './components/Art';
 import Projects from './components/Projects';
 
@@ -29,7 +28,6 @@ function App() {
             <Route path="projects" element={ <Projects/> } />
             <Route path="contact" element={ <Contact/> } />
           </Routes>
-          <FindMe />
       </Font>
     </div>
   );

@@ -10,6 +10,8 @@ import substack from '../images/substack.png'
 import goodreads from '../images/goodreads.png'
 import medium from '../images/medium.png'
 import github from '../images/github.png'
+import pdf from '../images/pdf.png'
+import email from '../images/email.webp'
 
 const Format = styled.div`
     padding: 1em;
@@ -56,13 +58,17 @@ function FindMe() {
                 <ExternalLink href={githubLink}><FindImg src={github} alt="Github" /></ExternalLink>
             </Col>
             <Col md={2}>
-                <ExternalLink href={substackLink}><FindImg src={substack} alt="Substack" /></ExternalLink>
-            </Col>
-            <Col md={2}>
                 <ExternalLink href={goodreadsLink}><FindImg src={goodreads} alt="Goodreads" /></ExternalLink>
             </Col>
             <Col md={2}>
-                <ExternalLink href={mediumLink}><FindImg src={medium} alt="Medium" /></ExternalLink>
+                <a href="mailto:rachaelwei@gmail.com" target="_blank" rel="noreferrer">
+                    <FindImg src={email} alt="Email" />
+                </a>
+            </Col>
+            <Col md={2}>
+            <a href="%PUBLIC_URL%/resume_rachael.pdf" download="rachael_resume.pdf">
+                <FindImg src={pdf} alt="Medium" />
+            </a>
             </Col>
             </Row>
         </Container>
