@@ -34,8 +34,8 @@ const ResearchProjects = (props) => {
           about={
             "Coming soon!"
           }
-          github="https://github.com/rachwei"
-          skills={['React', 'MongoDB', 'Pytorch', 'Express']}
+          github="https://github.com/rachwei/muxi"
+          skills={['React', 'MongoDB', 'Express', 'Flask']}
           image={muxi}
           showSidebar={showSidebar}
           setShowSidebar={setShowSidebar}
