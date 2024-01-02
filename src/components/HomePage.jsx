@@ -228,7 +228,7 @@ function Grid() {
                         <b>email</b>
                     </a>
                     {' '} or check out my {' '}
-                    <a href="%PUBLIC_URL%/resume_rachael.pdf" download="rachael_resume.pdf">
+                    <a href={`${process.env.PUBLIC_URL}/resume_rachael.pdf`} download="rachael_resume.pdf">
                         <b>resume</b>
                     </a>.
                     <br></br>I hope you like your stay here :)

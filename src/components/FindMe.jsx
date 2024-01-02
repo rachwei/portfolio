@@ -66,7 +66,7 @@ function FindMe() {
                 </a>
             </Col>
             <Col md={2}>
-            <a href="%PUBLIC_URL%/resume_rachael.pdf" download="rachael_resume.pdf">
+            <a href={`${process.env.PUBLIC_URL}/resume_rachael.pdf`} download="rachael_resume.pdf">
                 <FindImg src={pdf} alt="Medium" />
             </a>
             </Col>
