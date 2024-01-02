@@ -92,7 +92,7 @@ const ProjectCard = (props) => {
         visibility: showSidebar && showSidebar == props.name ? 'visible' : 'hidden',
         transition: 'opacity 0.3s ease-in-out',
       }}
-      className={`fixed top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[40vw] bg-white p-10 text-black z-40 flex flex-col ${
+      className={`fixed top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[40vw] bg-white p-10 text-black z-40 flex flex-col max-h-[80vh] overflow-y-auto ${
         showSidebar && showSidebar == props.name ? 'visible border border-gray-300 p-4' : 'invisible'
       }`}
 >
@@ -110,9 +110,13 @@ const ProjectCard = (props) => {
             <hr className="my-4 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
             <div className="flex items-center">
-              <img className="mt-4 rounded-lg w-50 aspect-auto mx-auto" src={props.image} alt={props.name} />
+              <div className="flex items-start h-[50vh]">
+                <div className="w-full h-full">
+                  <img className="rounded-lg w-full h-full object-cover" src={props.image} alt={props.name} />
+                </div>
+              </div>
 
-              <div className="ml-4 w-[40%] px-4">
+              <div className="ml-4 w-[50%] px-4">
                 <div className="text-lg font-semibold text-black text-montserrat mb-2">
                   {props.name}
                 </div>
