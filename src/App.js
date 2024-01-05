@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     // Automatically show an alert after the component is mounted
-    toast.info('Mobile friendly version coming soon! 📱', {
+    toast.info('Small-screen version coming soon! 👷‍♀️', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
