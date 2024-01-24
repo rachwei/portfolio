@@ -231,6 +231,11 @@ function Grid() {
                     <a href={`${process.env.PUBLIC_URL}/resume_rachael.pdf`} download="rachael_resume.pdf">
                         <b>resume</b>
                     </a>.
+                    <br></br> You can also find me on {' '} 
+                    <a href="https://medium.com/@rachaelwei" target="_blank" rel="noreferrer">
+                        <b>Medium</b>
+                    </a>
+                    {','} where I publish articles every week!
                     <br></br>I hope you like your stay here :)
                     <br></br><b>Website under construction! 👷‍♀️</b>
                 </p>

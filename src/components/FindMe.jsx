@@ -58,7 +58,7 @@ function FindMe() {
                 <ExternalLink href={githubLink}><FindImg src={github} alt="Github" /></ExternalLink>
             </Col>
             <Col md={2}>
-                <ExternalLink href={goodreadsLink}><FindImg src={goodreads} alt="Goodreads" /></ExternalLink>
+                <ExternalLink href={mediumLink}><FindImg src={medium} alt="Medium" /></ExternalLink>
             </Col>
             <Col md={2}>
                 <a href="mailto:rachaelwei@gmail.com" target="_blank" rel="noreferrer">
