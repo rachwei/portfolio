@@ -10,6 +10,7 @@ import mongodbproject from '../images/mongodbproject.png'
 import arpaint from '../images/arpaint2.png'
 import faceswapping from '../images/faceswapping.png'
 import muxi from '../images/muxi.jpg'
+import kyle from '../images/kyle.jpeg'
 
 const ResearchProjects = (props) => {
   const { showSidebar, setShowSidebar } = props;
@@ -24,6 +25,19 @@ const ResearchProjects = (props) => {
           github="https://github.com/rachwei/portfolio"
           skills={['React', 'Tailwind']}
           image={website}
+          showSidebar={showSidebar}
+          setShowSidebar={setShowSidebar}
+        />
+
+        <ProjectCard
+          name="Autobook: an Autonomous AI Learning Agent"
+          blurb="A robot that helps you understand text better!"
+          about="Lately, I've been really interested in the intersection between AI and EdTech, and wanted to create an interactive AI bot that helps you comprehend what you read better. It's easy to forget what we read sometimes, but having a way to ask and answer questions based on a text could let us think deeper and ultimately recall faster. 
+                This project allows you to import any image/file, extract text from it, and generate comprehension questions or ask an AI bot created by Langchain and an Ollama model some questions. The AI bot then undergoes a research process and eventually reports its findings."
+          github="https://github.com/rachwei/autobook"
+          skills={['PostgreSQL', 'Langchain', 'Ollama']}
+          image_cred="Kyle Holbrook"
+          image={kyle}
           showSidebar={showSidebar}
           setShowSidebar={setShowSidebar}
         />

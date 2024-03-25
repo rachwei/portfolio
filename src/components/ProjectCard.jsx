@@ -149,6 +149,8 @@ const ProjectCard = (props) => {
                 <a className="text-xs text-black font-poppins hover:underline" href={props.github}>
                   {props.github}
                 </a>
+                <div className="mt-4 text-md text-black text-montserrat mb-2"><b></b></div>
+                <div className="text-xs text-black font-poppins hover:underline"><b>Photo credit: </b>{props.image_cred}</div>
               </div>
             </div>
             <div className="mt-4 text-md text-black text-montserrat mb-2 font-bold">About</div>
