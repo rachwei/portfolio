@@ -14,64 +14,58 @@ const ResearchPage = styled.div`
     margin-top: 5em;
     width: 100%;
 `
-
-const typewriter = keyframes`
-    from {
-        width: 0;
-    }
-    to {
-        width: 675px;
-    }
-`
-const blinkTextCursor = keyframes`
-    from {
-        border-right-color: hsl(0, 0%, 90%);
-    }
-    to {
-        border-right-color: transparent;
-    }
-`
-
-const stopBlink = keyframes`
-    from, to {
-        border-right: transparent;
-    }
-`;
-
 const Title = styled.h1`
     overflow: hidden;
-    white-space: nowrap;
-    font-size: 25px;
+    // white-space: nowrap;
+    width: 100%;
     font-weight: bold;
-    border-right: 2px solid hsl(0, 0%, 90%);
-    animation: ${typewriter} 6s steps(44) 1s 1 normal both,
-               ${blinkTextCursor} 1s infinite,
-               ${stopBlink} 1s 7s 1 normal forwards;
 `
 
 const Subtitle = styled.p`
-    font-size: 14px;
+    font-size: width: 100%
 `
-
 const Opaque = styled.div`
 `
 
-
+// cursor effect: https://medium.com/codex/a-nice-typing-animation-with-react-js-6cda948af10f
 function Research() {
     const [showSidebar, setShowSidebar] = useState(null);
+    const finalTitle = "Intelligent Tutoring Systems and 3D Scenes..."
+    const [title, setTitle] = useState("");
+    const [index, setIndex] = useState(0);
+
+
+    useEffect(() => {
+        const animKey = setInterval(() => {
+          setIndex((index) => {
+    
+            if (index >= finalTitle.length - 1) {
+              clearInterval(animKey);
+              return index;
+            }
+            return index + 1;
+          });
+        }, 150);
+      }, []);
+
+    useEffect(() => {
+        setTitle(
+            (title) => title + finalTitle[index]
+        );
+    }, [index]);
 
     return (
         <ResearchPage>
             <Opaque className={`${showSidebar ? 'opacity-30' : 'opacity-100'}`}>
-                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "2em"}}>
+                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
                     <Col md={6}>
-                        <Title>Intelligent Tutoring Systems and 3D Scenes...</Title>
+                        <Title>{title}</Title>
                     </Col>
                     <Col md={6}>
                         <Subtitle> As a research intern at Carnegie Mellon's Human-Computer Interaction 
                             Institute, I worked on projects aimed to optimize <b>AL (Apprentice Learner)</b>, 
                             an intelligent tutoring system. I've also researched 
-                            in the computer vision/robot motion-planning space over the years as part of UIUC's
+                            in the computer vision/robot motion-planning space as part of UIUC's
                             CS STARS program on topics like <b>NeRF</b> and <b>configuration spaces</b>. 
                         </Subtitle>
                     </Col>

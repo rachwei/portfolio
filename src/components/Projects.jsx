@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import Projects from './PersonalProjects'
-import ResearchProjects from './ResearchProjects';
 
 const ResearchPage = styled.div`
     padding: 2em;
@@ -38,20 +37,28 @@ const stopBlink = keyframes`
     }
 `;
 
+
 const Title = styled.h1`
     overflow: hidden;
-    white-space: nowrap;
-    font-size: 25px;
+    // white-space: nowrap;
+    width: 100%;
     font-weight: bold;
-    border-right: 2px solid hsl(0, 0%, 90%);
-    animation: ${typewriter} 6s steps(44) 1s 1 normal both,
-               ${blinkTextCursor} 1s infinite,
-               ${stopBlink} 1s 7s 1 normal forwards;
 `
 
 const Subtitle = styled.p`
-    font-size: 14px;
+    font-size: width: 100%
 `
+
+// const Title = styled.h1`
+    // overflow: hidden;
+    // white-space: nowrap;
+    // font-size: 25px;
+    // font-weight: bold;
+    // border-right: 2px solid hsl(0, 0%, 90%);
+    // animation: ${typewriter} 6s steps(44) 1s 1 normal both,
+    //            ${blinkTextCursor} 1s infinite,
+    //            ${stopBlink} 1s 6s 1 normal forwards;
+// `
 
 const Opaque = styled.div`
 `
@@ -59,18 +66,42 @@ const Opaque = styled.div`
 
 function Research() {
     const [showSidebar, setShowSidebar] = useState(null);
+    const finalTitle = "Autonomous AI Agents and Drawing in 3D..."
+    const [title, setTitle] = useState("");
+    const [index, setIndex] = useState(0);
+
+
+    useEffect(() => {
+        const animKey = setInterval(() => {
+          setIndex((index) => {
+    
+            if (index >= finalTitle.length - 1) {
+              clearInterval(animKey);
+              return index;
+            }
+            return index + 1;
+          });
+        }, 150);
+      }, []);
+
+    useEffect(() => {
+        setTitle(
+            (title) => title + finalTitle[index]
+        );
+    }, [index]);
 
     return (
         <ResearchPage>
             <Opaque className={`${showSidebar ? 'opacity-30' : 'opacity-100'}`}>
-                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "2em"}}>
+                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
                     <Col md={6}>
-                        <Title>Generated Suggestions and Drawing in 3D...</Title>
+                        <Title>{title}</Title>
                     </Col>
-                    <Col md={6}>
+                    <Col md={6} style={{ flex: "1" }}>
                         <Subtitle> Some projects from over the years! 
                             <br></br>
-                            <b>Under construction 👷‍♀️</b>
+                            Many of them originated from the question: 
+                            <br></br><b>how can we use tech to enhance our hobbies/learning processes</b>?
                         </Subtitle>
                     </Col>
                 </Row>
