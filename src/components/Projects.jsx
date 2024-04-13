@@ -64,18 +64,19 @@ function Research() {
 
     return (
         <ResearchPage>
-                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
-                    <Col md={6}>
-                        <Title>{title}</Title>
-                    </Col>
-                    <Col md={6} style={{ flex: "1" }}>
-                        <Subtitle> Some projects from over the years! 
-                            <br></br>
-                            Many of them originated from the question: 
-                            <br></br><b>how can we use tech to enhance our hobbies/learning processes</b>?
-                        </Subtitle>
-                    </Col>
-                </Row>
+            <Row style={{"height": "auto", marginBottom: "1em"}}></Row>
+            <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-3em"}}>
+                <Col md={6}>
+                    <Title>{title}</Title>
+                </Col>
+                <Col md={6} style={{ flex: "1" }}>
+                    <Subtitle> Some projects from over the years! 
+                        <br></br>
+                        Many of them originated from the question: 
+                        <br></br><b>how can we use tech to enhance our hobbies/learning processes</b>?
+                    </Subtitle>
+                </Col>
+            </Row>
             <Row>
                 <Projects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
             </Row>

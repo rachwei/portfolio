@@ -53,22 +53,23 @@ function Research() {
 
     return (
         <ResearchPage>
-                <Row className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
-                    <Col md={6}>
-                        <Title>{title}</Title>
-                    </Col>
-                    <Col md={6}>
-                        <Subtitle> As a research intern at Carnegie Mellon's Human-Computer Interaction 
-                            Institute, I worked on projects aimed to optimize <b>AL (Apprentice Learner)</b>, 
-                            an intelligent tutoring system. I've also researched 
-                            in the computer vision/robot motion-planning space as part of UIUC's
-                            CS STARS program on topics like <b>NeRF</b> and <b>configuration spaces</b>. 
-                        </Subtitle>
-                    </Col>
-                </Row>
-                <Row>
-                    <ResearchProjects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-                </Row>
+            <Row style={{"height": "auto", marginBottom: "1em"}}></Row>
+            <Row className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-3em"}}>
+                <Col md={6}>
+                    <Title>{title}</Title>
+                </Col>
+                <Col md={6}>
+                    <Subtitle> As a research intern at Carnegie Mellon's Human-Computer Interaction 
+                        Institute, I worked on projects aimed to optimize <b>AL (Apprentice Learner)</b>, 
+                        an intelligent tutoring system. I've also researched 
+                        in the computer vision/robot motion-planning space as part of UIUC's
+                        CS STARS program on topics like <b>NeRF</b> and <b>configuration spaces</b>. 
+                    </Subtitle>
+                </Col>
+            </Row>
+            <Row>
+                <ResearchProjects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+            </Row>
         </ResearchPage>
     );
 }
