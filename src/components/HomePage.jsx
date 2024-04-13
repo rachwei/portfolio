@@ -91,7 +91,7 @@ const LayeredElement = styled.div`
 
 const ArtHome = styled.img`
     width: 250px;
-    transform: translateY(55%) translateX(370%);
+    transform: translateY(55%) translateX(380%);
     transition: transform 0.3s ease-in-out;
 
     @media (min-width: 200px) and (max-width: 1200px) {
@@ -114,7 +114,7 @@ const ArtHome = styled.img`
 
 const ProjectHome = styled.img`
     width: 285px;
-    transform: translateY(25%) translateX(310%);
+    transform: translateY(30%) translateX(350%);
     transition: transform 0.3s ease-in-out;
 
     @media (min-width: 200px) and (max-width: 1200px) {
@@ -127,10 +127,14 @@ const ProjectHome = styled.img`
     }
 
     &:hover {
-        transform: scale(1.2) translateY(25%) translateX(260%);
+        transform: scale(1.2) translateY(25%) translateX(290%);
 
         @media (min-width: 200px) and (max-width: 1200px) {
             transform: scale(1.2) translateY(25%) translateX(220%);
+            transition: transform 0.3s ease-in-out;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            transform: scale(1.2) translateY(25%) translateX(245%);
             transition: transform 0.3s ease-in-out;
         }
     }
