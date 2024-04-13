@@ -48,24 +48,24 @@ function FindMe() {
             <h3>find me...</h3>
             <Container>
             <Row>
-            <Col md={2}>
+            <Col xs={2} md={2}>
                 <ExternalLink href={spotifyLink}><FindImg src={spotify} alt="Spotify" /></ExternalLink>
             </Col>
-            <Col md={2}>
+            <Col xs={2} md={2}>
                 <ExternalLink href={linkedinLink}><FindImg src={linkedin} alt="Linkedin" /></ExternalLink>
             </Col>
-            <Col md={2}>
+            <Col xs={2} md={2}>
                 <ExternalLink href={githubLink}><FindImg src={github} alt="Github" /></ExternalLink>
             </Col>
-            <Col md={2}>
+            <Col xs={2} md={2}>
                 <ExternalLink href={mediumLink}><FindImg src={medium} alt="Medium" /></ExternalLink>
             </Col>
-            <Col md={2}>
+            <Col xs={2} md={2}>
                 <a href="mailto:rachaelwei@gmail.com" target="_blank" rel="noreferrer">
                     <FindImg src={email} alt="Email" />
                 </a>
             </Col>
-            <Col md={2}>
+            <Col xs={2} md={2}>
             <a href={`${process.env.PUBLIC_URL}/resume_rachael.pdf`} download="rachael_resume.pdf">
                 <FindImg src={pdf} alt="Medium" />
             </a>

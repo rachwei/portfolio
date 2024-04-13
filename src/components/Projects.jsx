@@ -1,11 +1,10 @@
 import React, {Component, useEffect, useState} from 'react';
 import styled, {keyframes} from 'styled-components'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import Projects from './PersonalProjects'
+
 
 const ResearchPage = styled.div`
     padding: 2em;
