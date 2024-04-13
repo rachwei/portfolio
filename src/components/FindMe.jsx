@@ -19,8 +19,8 @@ const Format = styled.div`
     border-radius: 5px;
     background-color: white;
     padding: 1em;
-    
-    @media (min-width: 480px) {
+
+    @media (min-width: 700px) {
         position: fixed;
         left: 3%;
         top: 80%;

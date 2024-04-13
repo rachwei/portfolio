@@ -166,14 +166,14 @@ const ResearchHome = styled.img`
 
 const Mobile = styled.div`
     display: block;
-    @media (min-width : 480px) {
+    @media (min-width : 700px) {
         display: none;
     }
 `
 
 const Desktop = styled.div`
     display: block;
-    @media (max-width : 480px) {
+    @media (max-width : 700px) {
         display: none;
     }
 `
