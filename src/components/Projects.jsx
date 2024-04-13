@@ -13,30 +13,6 @@ const ResearchPage = styled.div`
     width: 100%;
 `
 
-const typewriter = keyframes`
-    from {
-        width: 0;
-    }
-    to {
-        width: 630px;
-    }
-`
-const blinkTextCursor = keyframes`
-    from {
-        border-right-color: hsl(0, 0%, 90%);
-    }
-    to {
-        border-right-color: transparent;
-    }
-`
-
-const stopBlink = keyframes`
-    from, to {
-        border-right: transparent;
-    }
-`;
-
-
 const Title = styled.h1`
     overflow: hidden;
     // white-space: nowrap;
@@ -58,9 +34,6 @@ const Subtitle = styled.p`
     //            ${blinkTextCursor} 1s infinite,
     //            ${stopBlink} 1s 6s 1 normal forwards;
 // `
-
-const Opaque = styled.div`
-`
 
 
 function Research() {
@@ -91,7 +64,6 @@ function Research() {
 
     return (
         <ResearchPage>
-            <Opaque className={`${showSidebar ? 'opacity-30' : 'opacity-100'}`}>
                 <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
                     <Col md={6}>
                         <Title>{title}</Title>
@@ -104,7 +76,6 @@ function Research() {
                         </Subtitle>
                     </Col>
                 </Row>
-            </Opaque>
             <Row>
                 <Projects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
             </Row>

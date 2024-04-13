@@ -10,9 +10,9 @@ const ProjectCard = (props) => {
   const { showSidebar, setShowSidebar } = props;
 
   return (
-    <div>
+    <div className="flex justify-center items-center">
       {' '}
-      <div className="flex pr-8 pb-8">
+      <div className="flex pl-4 pr-4 pt-8">
         <div>
           {showSidebar ? (
             <div className={`${showSidebar ? 'opacity-30' : 'opacity-100'}`}>

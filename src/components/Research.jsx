@@ -16,15 +16,12 @@ const ResearchPage = styled.div`
 `
 const Title = styled.h1`
     overflow: hidden;
-    // white-space: nowrap;
     width: 100%;
     font-weight: bold;
 `
 
 const Subtitle = styled.p`
     font-size: width: 100%
-`
-const Opaque = styled.div`
 `
 
 // cursor effect: https://medium.com/codex/a-nice-typing-animation-with-react-js-6cda948af10f
@@ -56,8 +53,7 @@ function Research() {
 
     return (
         <ResearchPage>
-            <Opaque className={`${showSidebar ? 'opacity-30' : 'opacity-100'}`}>
-                <Row xs={1} md={2} className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
+                <Row className="d-flex justify-content-center" style={{"height": "auto", marginBottom: "-2em"}}>
                     <Col md={6}>
                         <Title>{title}</Title>
                     </Col>
@@ -70,10 +66,9 @@ function Research() {
                         </Subtitle>
                     </Col>
                 </Row>
-            </Opaque>
-            <Row>
-                <ResearchProjects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-            </Row>
+                <Row>
+                    <ResearchProjects showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+                </Row>
         </ResearchPage>
     );
 }

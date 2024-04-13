@@ -12,7 +12,7 @@ import faceswapping from '../images/faceswapping.png'
 import muxi from '../images/muxi.jpg'
 import kyle from '../images/kyle.jpeg'
 
-const ResearchProjects = (props) => {
+const PersonalProjects = (props) => {
   const { showSidebar, setShowSidebar } = props;
 
   return (
@@ -99,4 +99,4 @@ const ResearchProjects = (props) => {
   );
 };
 
-export default ResearchProjects;
+export default PersonalProjects;
