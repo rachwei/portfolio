@@ -14,14 +14,17 @@ import pdf from '../images/pdf.png'
 import email from '../images/email.webp'
 
 const Format = styled.div`
-    padding: 1em;
-    position: fixed;
-    left: 3%;
-    top: 80%;
     font-size: 1em;
     border: 1px solid #000;
     border-radius: 5px;
     background-color: white;
+    padding: 1em;
+    
+    @media (min-width: 480px) {
+        position: fixed;
+        left: 3%;
+        top: 80%;
+    }
 `
 
 const FindImg = styled.img`

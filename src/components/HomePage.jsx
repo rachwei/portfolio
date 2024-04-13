@@ -104,9 +104,14 @@ const ArtHome = styled.img`
     }
 
     &:hover {
-        transform: scale(1.2) translateY(50%) translateX(320%);
+        transform: scale(1.2) translateY(50%) translateX(350%);
+
         @media (min-width: 200px) and (max-width: 1200px) {
             transform: scale(1.2) translateY(50%) translateX(290%);
+            transition: transform 0.3s ease-in-out;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            transform: scale(1.2) translateY(50%) translateX(320%);
             transition: transform 0.3s ease-in-out;
         }
     }
@@ -156,6 +161,20 @@ const ResearchHome = styled.img`
 
     &:hover {
         transform: scale(1.2) translateY(110%) translateX(-10%);
+    }
+`
+
+const Mobile = styled.div`
+    display: block;
+    @media (min-width : 480px) {
+        display: none;
+    }
+`
+
+const Desktop = styled.div`
+    display: block;
+    @media (max-width : 480px) {
+        display: none;
     }
 `
 
@@ -270,9 +289,10 @@ function HomePage() {
             <h1 style ={{"height": "8vh"}}></h1>
             <Row style={{"height": "70vh"}}>
                 <Grid />
+                <Mobile><FindMe/></Mobile>
             </Row>
             </Container>
-            <FindMe />
+            <Desktop><FindMe /></Desktop>
         </Home>
     );
 }
