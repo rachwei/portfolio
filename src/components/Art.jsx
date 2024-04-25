@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import stringgirl from '../images/string_girl.png'
 import mailbox from '../images/mailbox.png'
+import architect from '../images/architect.jpeg'
 
 const ArtPage = styled.div`
     padding: 2em;
@@ -37,7 +38,7 @@ function Art() {
         <ArtPage>
             <DraggableImage width={100} height={260} background={stringgirl}/>
             <DraggableImage width={100} height={260} background={mailbox}/>
-            <Draggable><h2>Under construction 👷‍♀️</h2></Draggable>
+            <DraggableImage width={100} height={260} background={architect}/>
             <Draggable><h1>I'm draggable!</h1></Draggable>
         </ArtPage>
     );
