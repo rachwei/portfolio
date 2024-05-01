@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.09c67794.css",
-    "main.js": "/static/js/main.7b5aaf3a.js",
+    "main.js": "/static/js/main.ad7d0001.js",
     "static/js/787.c922dae8.chunk.js": "/static/js/787.c922dae8.chunk.js",
     "static/media/mailbox.png": "/static/media/mailbox.be12e43fb35b1f16f112.png",
     "static/media/purpleart.JPG": "/static/media/purpleart.e9cb9552b21966b79e2f.JPG",
+    "static/media/memory.mp4": "/static/media/memory.1fef7003dd6572217f23.mp4",
     "static/media/researchposter.JPG": "/static/media/researchposter.ec00bddbe5ccbcb807ce.JPG",
     "static/media/chinesesticker.jpg": "/static/media/chinesesticker.dd2da705aeea6e8418ee.jpg",
     "static/media/sticker.JPG": "/static/media/sticker.6a94e9e64a808f0f2990.JPG",
@@ -15,6 +16,7 @@
     "static/media/string_girl.png": "/static/media/string_girl.4fc785a18b670d0b8f5e.png",
     "static/media/slant.JPG": "/static/media/slant.f153e2a90b0262bda0d0.JPG",
     "static/media/arpaint2.png": "/static/media/arpaint2.a0a456f9161783cc5a87.png",
+    "static/media/1010.mp4": "/static/media/1010.4c7bf85661fa8fd57563.mp4",
     "static/media/angles.JPG": "/static/media/angles.c588e9c67ca1e559a15d.JPG",
     "static/media/faceswapping.png": "/static/media/faceswapping.ddc4d238166d0a527dbd.png",
     "static/media/tomi.JPG": "/static/media/tomi.de988ddd637a0fb7a1e2.JPG",
@@ -39,11 +41,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.09c67794.css.map": "/static/css/main.09c67794.css.map",
-    "main.7b5aaf3a.js.map": "/static/js/main.7b5aaf3a.js.map",
+    "main.ad7d0001.js.map": "/static/js/main.ad7d0001.js.map",
     "787.c922dae8.chunk.js.map": "/static/js/787.c922dae8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09c67794.css",
-    "static/js/main.7b5aaf3a.js"
+    "static/js/main.ad7d0001.js"
   ]
 }
